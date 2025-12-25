@@ -1,50 +1,69 @@
-# Welcome to your Expo app 👋
+# Campus FixIt �️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A comprehensive mobile issue reporting system for university campuses. Students can report facility issues (electrical, water, etc.), and admins can track and resolve them.
 
-## Get started
+### Demo - https://drive.google.com/file/d/1m12Gkqypf8eO3lMxAUsW7K9OUXtTUZ3X/view?usp=sharing
 
-1. Install dependencies
+## ✨ Features
 
-   ```bash
-   npm install
-   ```
+### 📱 Student App
+- **Issue Reporting**: Capture photos and submit detailed reports.
+- **My Issues Dashboard**: Track the status of your reported issues.
+- **Filtering**: Easily filter issues by **Category** (Electrical, Water, etc.) and **Status** (Open, Resolved).
+- **Notifications**: Receive email updates when an admin changes your issue status.
 
-2. Start the app
+### 🖥️ Admin Dashboard
+- **Issue Management**: View all reported issues in one place.
+- **Status Updates**: Mark issues as 'In Progress' or 'Resolved' and add remarks.
+- **Automatic Emails**: Updates trigger automatic emails to the student.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🚀 Getting Started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Prerequisites
+- Node.js & npm
+- MongoDB (running locally or cloud)
+- Expo CLI
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 1. Backend Setup
 
-## Get a fresh project
-
-When you're ready, run:
+The backend handles the API, database connection, and email services.
 
 ```bash
-npm run reset-project
+cd backend
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+**Configuration (.env):**
+Create a `.env` file in the `backend` folder:
 
-## Learn more
+**Start the Server:**
+```bash
+npm run dev
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 2. Frontend Setup (Mobile App)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+# In the root directory
+npm install
+```
 
-## Join the community
+**Start the App:**
+```bash
+npx expo start
+```
+- Press `i` for iOS Simulator
+- Press `a` for Android Emulator
+- Scan QR code with Expo Go app on your phone
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🛠️ Tech Stack
+
+- **Frontend**: React Native, Expo, Expo Router, TypeScript
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB, Mongoose
+- **Services**: Nodemailer (Emails), Multer (Image Uploads)
+- **Auth**: JWT (JSON Web Tokens)
